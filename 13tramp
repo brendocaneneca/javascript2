@@ -1,0 +1,16 @@
+function ehPrimo(numero) {
+    if (numero <= 1) return false;
+    for (let i = 2; i <= Math.sqrt(numero); i++) {
+        if (numero % i === 0) return false;
+    }
+    return true;
+}
+
+const numero = 345;
+if (ehPrimo(numero)) {
+    console.log("Entrada:", numero);
+    console.log("Saída: É primo");
+} else {
+    console.log("Entrada:", numero);
+    console.log("Saída: Não é primo");
+}
